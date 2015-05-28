@@ -1,0 +1,40 @@
+<div class="container" ng-class="{'show-menu': vm.isOpen}" ng-controller="HeaderController as vm">
+    <div class="menu-wrap">
+        <nav class="menu">
+            <div class="icon-list">
+                <a href="#!/articles"><i class="fa fa-fw fa-star-o"></i><span>Articles</span></a>
+                <a href="#"><i class="fa fa-fw fa-bell-o"></i><span>Todo</span></a>
+                <a href="#"><i class="fa fa-fw fa-music"></i><span>Music</span></a>
+                <a href="#"><i class="fa fa-fw fa-newspaper-o"></i><span>Reading List</span></a>
+            </div>
+        </nav>
+        <button class="close-button" id="close-button" ng-click="vm.toggleMenu()">Close Menu</button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button" id="open-button" ng-click="vm.toggleMenu()"></button>
+    <div class="content-wrap" ui-scrollfix="+150">
+        <div class="content">
+            <div class="favonius-header">
+                <div class="favonius-title">
+                    <h1>Favonius</h1>
+                </div>
+                <!--nav>
+                    <a href="index.html">Top Side</a>
+                    <a href="sideslide.html">Side Slide</a>
+                    <a href="cornerbox.html">Corner Box</a>
+                    <a href="cornerbox_nested.html">Nested Corner Box</a>
+                    <a href="topexpand.html">Top Expand</a>
+                    <a href="cornermorph.html">Corner Morph</a>
+                    <a href="elastic.html">Elastic</a>
+                    <a class="current-demo" href="bubble.html">Bubble</a>
+                    <a href="wave.html">Wave</a>
+                </nav-->
+            </div>
+            <section data-ui-view></section>
+        </div>
+    </div><!-- /content-wrap -->
+</div><!-- /container -->

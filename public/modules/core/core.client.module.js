@@ -14,6 +14,6 @@
         /*
          * 3rd Party modules
          */
-        'ui.router', 'ui.bootstrap', 'ui.utils',
+        'ui.router', 'ui.bootstrap', 'ui.utils'
     ]);
 })();
