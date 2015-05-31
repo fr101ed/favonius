@@ -19,9 +19,10 @@
             	state: 'home',
             	config: {
             		url: '/',
-            		controller: 'ArticlesController',
+            		controller: 'HomeController',
             		controllerAs: 'vm',
-            		templateUrl: 'modules/articles/views/list-articles.client.view.html'
+            		templateUrl: 'modules/core/views/home.client.view.html',
+                    access_level: 'all',
             	}
             }
             ];

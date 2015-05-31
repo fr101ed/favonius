@@ -5,6 +5,7 @@
         'app.core',
         'app.users',
         'app.articles',
+        'app.music',
     ]);
     
     // Setting HTML5 Location Mode
@@ -13,6 +14,21 @@
             $locationProvider.hashPrefix('!');
         }
     ]);
+
+    angular.module('app').run(function($rootScope, $location, logger, Authentication) {
+        $rootScope.$on('$stateChangeStart', function(evt, next, curr) {
+            if (next.url === curr.url || !curr.url)
+                return;
+            if (!Authentication.isAuthorized(next.access_level)) {
+                if (Authentication.isLoggedIn()) {
+                    logger.warning("Sorry, you have no access to this!");
+                    $location.path('/');
+                } else {
+                    $location.path('/signin');
+                };
+            };
+        });
+    });
 
     //Then define the init function for starting up the application
     angular.element(document).ready(function() {

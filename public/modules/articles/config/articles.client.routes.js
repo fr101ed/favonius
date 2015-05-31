@@ -21,7 +21,8 @@
                     url: '/articles',
                     controller: 'ArticlesController',
                     controllerAs: 'vm',
-                    templateUrl: '/modules/articles/views/list-articles.client.view.html'
+                    templateUrl: '/modules/articles/views/list-articles.client.view.html',
+                    access_level: 'all',
                 }
             },
             {
@@ -30,7 +31,8 @@
                     url: '/articles/create',
                     controller: 'ArticlesController',
                     controllerAs: 'vm',
-                    templateUrl: '/modules/articles/views/create-article.client.view.html'
+                    templateUrl: '/modules/articles/views/create-article.client.view.html',
+                    access_level: 'user',
                 }
             },
             {
@@ -39,7 +41,8 @@
                     url: '/articles/:articleId',
                     controller: 'ArticlesController',
                     controllerAs: 'vm',
-                    templateUrl: '/modules/articles/views/view-article.client.view.html'
+                    templateUrl: '/modules/articles/views/view-article.client.view.html',
+                    access_level: 'all',
                 }
             },
             {
@@ -48,7 +51,8 @@
                     url: '/articles/:articleId/edit',
                     controller: 'ArticlesController',
                     controllerAs: 'vm',
-                    templateUrl: '/modules/articles/views/edit-article.client.view.html'
+                    templateUrl: '/modules/articles/views/edit-article.client.view.html',
+                    access_level: 'user',
                 }
             },
         ];

@@ -15,6 +15,9 @@ module.exports = {
 			css: [
 				'public/lib/normalize-css/normalize.css',
 				'public/lib/font-awesome/css/font-awesome.min.css',
+				'public/lib/bootstrap/dist/css/bootstrap.min.css',
+				'public/lib/bootstrap/dist/css/bootstrap-theme.min.css',
+				'public/lib/toastr/toastr.min.css',
 			],
 			js: [
 				'public/lib/angular/angular.js',
@@ -26,6 +29,8 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+				'public/lib/jquery/dist/jquery.min.js',
+				'public/lib/toastr/toastr.min.js',
 				'public/lib/snap.svg/dist/snap.svg-min.js'
 			]
 		},

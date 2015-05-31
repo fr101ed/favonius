@@ -6,7 +6,7 @@
 		.module('app.users')
 		.run(appRun);
 
-	// appRun.$inject = ['$stateProvider'];
+	// appRun.$inject = ['$rootScope', 'routerHelper'];
 
 	/* @ngInject */
 	function appRun(routerHelper) {

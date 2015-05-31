@@ -5,16 +5,17 @@
 		.module('app.core')
 		.controller('HeaderController', HeaderController);
 
-	HeaderController.$inject = ['$scope', '$timeout', 'Authentication', 'Menus'];
+	HeaderController.$inject = ['$scope', '$timeout', 'Authentication', 'Menus', 'logger'];
 
 	/* @ngInject */
-	function HeaderController($scope, $timeout, Authentication, Menus) {
+	function HeaderController($scope, $timeout, Authentication, Menus, logger) {
 		var vm = this;
 
+        vm.authentication = Authentication;
         vm.isOpen = false;
         vm.isAnimating = false;
         vm.toggleMenu = toggleMenu;
-
+        logger.success('welcome!');
         var morphEl = document.getElementById( 'morph-shape' ),
         	s = Snap( morphEl.querySelector( 'svg' ) ),
         	path = s.select( 'path' ),
